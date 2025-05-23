@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --Purple-300: hsl(264, 82%, 80%);
+  --Purple-500: hsl(263, 55%, 52%);
+  --Light-gray: hsl(0, 0%, 81%);
+  --Grey-100: hsl(214, 17%, 92%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+
+  font-size: 62.5%;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  display: grid;
+  place-content: center;
+  background-color: var(--Light-grayish-blue);
+  font-size: 1.3rem;
+}
+main {
+  display: grid;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 2rem;
+  width: 80%;
+}
+
+section {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0.2rem 0.2rem 1rem rgba(128, 128, 128, 0.201);
+}
+
+p {
+  line-height: 2rem;
+}
+.card-1 {
+  background-color: var(--Moderate-violet);
+  background-image: url(images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top right 15%;
+  color: var(--Grey-100);
+}
+.card-1 h1 {
+  color: var(--White);
+  font-weight: 600;
+}
+.card-2 h1 {
+  color: var(--White);
+  font-weight: 600;
+}
+.card-3 h1 {
+  color: var(--Very-dark-grayish-blue);
+  font-weight: 600;
+}
+.card-4 h1 {
+  color: var();
+  font-weight: 500;
+}
+.card-5 h1 {
+  color: var(--Very-dark-grayish-blue);
+  font-weight: 600;
+}
+.card-2 {
+  background-color: var(--Very-dark-grayish-blue);
+  color: var(--Light-gray);
+}
+.card-3 {
+  background-color: var(--White);
+}
+.card-4 {
+  background-color: var(--Very-dark-blackish-blue);
+  color: var(--Light-gray);
+}
+.card-5 {
+  background-color: var(--White);
+  color: var();
+}
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  font-weight: 600;
+}
+.verified {
+  opacity: 50%;
+}
+.testimonial {
+  opacity: 70%;
+}
+.img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+}
+.img-1 {
+  background: url(images/image-daniel.jpg) no-repeat center center / cover;
+
+  border: solid 0.2rem;
+}
+.img-2 {
+  background: url(images/image-jonathan.jpg) no-repeat center center / cover;
+}
+.img-3 {
+  background: url(images/image-jeanette.jpg) no-repeat center center / cover;
+}
+.img-4 {
+  background: url(images/image-patrick.jpg) no-repeat center center / cover;
+  border: solid 0.2rem var(--Moderate-violet);
+}
+.img-5 {
+  background: url(images/image-kira.jpg) no-repeat center center / cover;
+}
+/* footer is here */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* media query is here */
+@media screen and (min-width: 768px) {
+  body {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  main {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+  section {
+    gap: 1rem;
+    padding: 2rem;
+  }
+  /* .profile h1 {
+    padding: 0;
+    line-height: 12px;
+  } */
+  .card-1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .card-3 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .card-2 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+
+  .card-4 {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+  }
+
+  .card-5 {
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+  }
+}
